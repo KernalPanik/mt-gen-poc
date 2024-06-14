@@ -1,0 +1,1 @@
+clang++ main.cpp pow.cpp --std=c++11 -o mrgen

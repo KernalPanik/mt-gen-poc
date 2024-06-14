@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <string>
+#include <iostream>
 
 struct PowMetamorphicRelation
 {
@@ -88,7 +89,7 @@ int main(void)
     int followUpXInputs[kTestPoolSize] = { 0 };
     int followUpEInputs[kTestPoolSize] = { 0 };
     fillRandom(-25, 25, xInputs, kTestPoolSize);
-    fillRandom(-25, 25, eInputs, kTestPoolSize);
+    fillRandom(0, 3, eInputs, kTestPoolSize);
 
     std::vector<PowMetamorphicRelation> generatedMRs = std::vector<PowMetamorphicRelation>();
     long powOutputs[kTestPoolSize] = { 0 };
@@ -114,7 +115,7 @@ int main(void)
         {
             for (size_t firstArgTransformConstant = 0; firstArgTransformConstant < 5; firstArgTransformConstant++)
             {
-                for (size_t secondArgTransformConstant = 0; secondArgTransformConstant < 5; secondArgTransformConstant++)
+                for (size_t secondArgTransformConstant = 2; secondArgTransformConstant < 5; secondArgTransformConstant++)
                 {
                     memset(powOutputs, 0, sizeof(powOutputs));
                     memset(powFollowUpOutputs, 0, sizeof(powFollowUpOutputs));
@@ -177,6 +178,11 @@ int main(void)
                 }
             }
         }
+    }
+
+    for (auto &i : generatedMRs)
+    {
+        std::cout << i.xTransformationId << std::endl;
     }
 
     return 0;
