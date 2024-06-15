@@ -136,10 +136,10 @@ int main(void)
                                     
                                     firstArgRes = followUpOutputTransforms[j](powOutputs[l], xInputs[l]);
                                     secondArgRes = followUpOutputTransforms[k](firstArgRes, eInputs[l]);
-                                    /*powOutputRelationSampleData1[l] = followUpOutputTransforms[k](
+                                    powOutputRelationSampleData1[l] = followUpOutputTransforms[k](
                                         followUpOutputTransforms[j](powOutputs[l], xInputs[l]), 
-                                        eInputs[l]);*/
-                                    powOutputRelationSampleData1[l] = secondArgRes;
+                                        eInputs[l]);
+                                    //powOutputRelationSampleData1[l] = secondArgRes;
                                 }
 
                                 firstArgTransform = j;
