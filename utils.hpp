@@ -30,3 +30,14 @@ inline double cosine_similarity(long *l1, long *l2, int arrSize)
 
     return dot / (sqrt(denom_a) * sqrt(denom_b)) ;
 }
+
+inline bool areArraysEqual(long* l1, long* l2, int arrSize)
+{
+    bool eq = true;
+    for (size_t i = 0; i < arrSize; i++)
+    {
+        eq &= l1[i] == l2[i];
+    }
+
+    return eq;
+}

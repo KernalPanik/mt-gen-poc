@@ -1,11 +1,16 @@
 #pragma once
 
-inline int numericAddition(int x, int constant)
+inline long numericAddition(int x, int constant)
 {
     return x + constant;
 }
 
-inline int numericMultiplication(int x, int constant)
+inline long numericSubtraction(int x, int constant)
+{
+    return x - constant;
+}
+
+inline long numericMultiplication(int x, int constant)
 {
     return x * constant;
 }

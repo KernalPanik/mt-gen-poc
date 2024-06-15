@@ -20,7 +20,6 @@ long simplePow(int x, int e)
     }
 
     return result;
-    return 0;
 }
 
 long simplePowMutant(int x, int e)
